@@ -262,7 +262,10 @@ public class ProjectInfoStep implements UIWizardStep {
                 Dependency dep = new Dependency();
                 dep.setGroupId("AAA");
                 dep.setArtifactId("BBB");
-                dependencies.add(dep);
+                Dependency dep1 = new Dependency();
+                dep1.setGroupId("CCC");
+                dep1.setArtifactId("DDD");
+                dependencies.add(dep1);
 
                 System.out.println(Arrays.asList(dependencies).toString());
                 
@@ -306,6 +309,7 @@ public class ProjectInfoStep implements UIWizardStep {
                             jb.add(k, v);
                         }
                         jb.add("fabric8-stack-analysis-ui", "0.1.1");
+                        jb.add("random-package", "1.2.3");
                         
                         j = (JsonValue) jb.build();
                         //jsonValue.add("fabric8-stack-analysis-ui", "0.1.1");
